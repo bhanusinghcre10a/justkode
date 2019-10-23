@@ -1,0 +1,102 @@
+.login-form {
+  border-radius: 4rem;
+  box-shadow: 2rem 3rem 2rem black;
+  margin-top: 28rem;
+  padding: 15rem 0;
+  margin-left: 35rem;
+  backface-visibility: hidden;
+  position: absolute;
+  height: 70rem;
+  width: 80rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-white, 1),
+    rgba($color-grey-2, 1)
+  );
+}
+.signup-form {
+  border-radius: 4rem;
+  box-shadow: 2rem 3rem 2rem black;
+  margin-top: 28rem;
+  padding: 15rem 0;
+  margin-left: 35rem;
+  backface-visibility: hidden;
+  position: absolute;
+  height: 70rem;
+  width: 80rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-white, 1),
+    rgba($color-grey-2, 1)
+  );
+}
+.form {
+  margin-top: 8rem;
+  position: relative;
+  width: 40rem;
+
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__input {
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    background-color: rgba($color-white, 0.9);
+    border: none;
+    width: 70%;
+    height: 80%;
+    border-bottom: 3px solid transparent;
+    display: block;
+    transition: all 0.3s;
+
+    &:focus {
+      border-bottom: 3px solid $color-primary;
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-dark, 0.3);
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+    &::-webkit-input-placeholder {
+      color: color-grey-2;
+    }
+  }
+  &__label {
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    font-size: 1.5rem;
+    display: block;
+    transition: all 0.3s;
+  }
+}
+.flot-left {
+  width: 35rem;
+  float: left;
+  margin-top: 8rem;
+}
+.float-right {
+  width: 35rem;
+  margin-left: -15rem;
+  float: right;
+}
+.left-login {
+  margin-left: 10rem;
+  width: 20rem;
+  height: 20rem;
+  background-image: url(http://localhost:3000/images/logim-pic.png);
+  background-size: cover;
+  z-index: 200;
+}
+.signup {
+  margin-top: 5rem;
+  &-link {
+    margin-left: 18rem;
+  }
+}

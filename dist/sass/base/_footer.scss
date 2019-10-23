@@ -1,0 +1,62 @@
+@mixin clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+.footer {
+  position: absolute;
+  width: 96%;
+  margin-top: 170rem;
+  padding: 15rem;
+  background-color: $color-dark-3;
+  font-size: 1.6rem;
+
+  &__icon {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__pic {
+    width: 15rem;
+    height: auto;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-white;
+      display: inline-block;
+    }
+    &:active,
+    &:hover {
+      box-shadow: 0 1rem 2rem rgba($color-dark, 0.4);
+      color: $color-primary;
+      transform: rotate(3deg) scale(1.2);
+    }
+  }
+  &__navigation {
+    border-top: 1.3px solid rgba($color-grey-2, 0.8);
+    padding-top: 2rem;
+    display: inline-block;
+  }
+  &__copyright {
+    color: white;
+    border-top: 1.3px solid rgba($color-grey-2, 0.8);
+    padding-top: 2rem;
+    width: 90%;
+    float: right;
+  }
+}

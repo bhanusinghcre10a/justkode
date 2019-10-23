@@ -1,0 +1,20 @@
+extends base
+
+block content
+	main.main
+		.login-form
+			h2.heading-secondary Log into your account
+			.flot-left
+				.left-login
+				.signup 
+					a.button-text.signup-link(href="/api/v1/signupp") signup
+			.float-right
+				form.form
+						.form__group
+							label.form__label(for='email') Email address
+							input.form__input(type='email' id='email', placeholder='you@example.com', required)
+						.form__group.ma-bt-md
+							label.form__label(for='password') Password
+							input.form__input(type='password' id='password', placeholder='••••••••', required, minlength='8')
+						.form__group
+							button.btn.btn--green Login

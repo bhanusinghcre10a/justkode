@@ -1,0 +1,63 @@
+.set {
+  position: fixed;
+
+  width: 96%;
+}
+.header {
+  background-image: url(http://localhost:3000/images/head-pic.jpeg);
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: left;
+}
+
+.head {
+  &__title {
+    height: 68rem;
+    position: relative;
+
+    &-text {
+      margin-top: -8rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-weight: bolder;
+      transform: translateX(-50%), translateY(50%);
+      &-1 {
+        font-size: 5rem;
+        color: brown;
+        font-stretch: ultra-expanded;
+        letter-spacing: 1.3rem;
+      }
+      &-2 {
+        font-size: 5rem;
+        color: brown;
+        letter-spacing: 1.3rem;
+      }
+      &-3 {
+        font-size: 1.5rem;
+        letter-spacing: 0.6rem;
+        color: brown;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__nav-searchbar {
+    height: 4rem;
+    margin-top: -2rem;
+    position: relative;
+    float: right;
+    right: 20px;
+    top: 20px;
+  }
+  &__title-logo {
+    margin-top: 0;
+    height: 4rem;
+  }
+}
+.search {
+  &-input {
+    font-size: 0.5rem;
+  }
+}
