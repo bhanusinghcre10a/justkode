@@ -7,8 +7,7 @@ export default class Users {
     try {
       const res = await axios({
         method: 'GET',
-        url:
-          'https://cors-anywhere.herokuapp.com/http://localhost:3000/api/v1/users/allusers'
+        url: '/api/v1/users/allusers'
       });
       this.result = res.data;
     } catch (err) {

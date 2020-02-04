@@ -8,7 +8,7 @@ exports.renderusers = users => {
       const markup = `
    <div class="card allusersss"  style="width: 40rem;">
    
-   <img src="http://localhost:3000/images/logim-pic.png" style="height:10rem;width:10rem" class="card-img-top c1" alt="..." />
+   <img src="/images/logim-pic.png" style="height:10rem;width:10rem" class="card-img-top c1" alt="..." />
    <div class="card-body">
      <h5 class="card-title c1">User's Bio</h5>
      <p class="card-text c1">
@@ -29,7 +29,7 @@ exports.renderusers = users => {
  </div>
  <div class="card allusersss"  style="width: 40rem;">
    
-   <img src="http://localhost:3000/images/logim-pic.png" style="height:10rem;width:10rem" class="card-img-top c1" alt="..." />
+   <img src="/images/logim-pic.png" style="height:10rem;width:10rem" class="card-img-top c1" alt="..." />
    <div class="card-body">
      <h5 class="card-title c1">User's Bio</h5>
      <p class="card-text c1">

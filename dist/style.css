@@ -20,7 +20,7 @@ body {
   width: 96%; }
 
 .header {
-  background-image: url(http://localhost:3000/images/head-pic.jpeg);
+  background-image: url(/images/head-pic.jpeg);
   text-transform: uppercase;
   background-size: cover;
   background-position: left; }
@@ -138,7 +138,7 @@ body {
   margin-left: 10rem;
   width: 20rem;
   height: 20rem;
-  background-image: url(http://localhost:3000/images/logim-pic.png);
+  background-image: url(/images/logim-pic.png);
   background-size: cover;
   z-index: 200; }
 
