@@ -15,9 +15,8 @@ mongoose
   .then(data => console.log('connected successfully'));
 
 const app = require('./app');
-const PORT = process.env.PORT || 3000;
 
-const server = app.listen(PORT, () => {
+const server = app.listen(process.env.PORT, () => {
   console.log('listening on port 300');
 });
 const io = require('socket.io')(server);
