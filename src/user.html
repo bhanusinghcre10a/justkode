@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="http://localhost:3000/style.css" />
+  </head>
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="check" />
+      <label for="check" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__bground">
+        &nbsp;
+      </div>
+      <div class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="/api/v1/home" class="navigation__link"
+              ><span>home</span></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="/api/v1/updateuser" class="navigation__link"
+              ><span>view profile</span></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="/api/v1/login" class="navigation__link"
+              ><span>login</span></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>update profile</span></a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>reset password</span></a>
+          </li>
+          <li class="navigation__item">
+            <a href="/api/v1/users/logout" class="navigation__link"><span>logout</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="hea1">
+      <div class="heading-secondary ha1">welcome user</div>
+    </div>
+    <div class="back">
+    <div class="profile">
+        
+      </div>
+          <form class="forms">
+            <div class="form-group row">
+              <label for="inputname" class="col-sm-2 col-form-label">name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inpurname">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputabout" class="col-sm-2 col-form-label">about</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputabout">
+              </div>
+            </div>
+            <fieldset class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">year</legend>
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                      first
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                      Second 
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+                    <label class="form-check-label" for="gridRadios3">
+                      Third 
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+                    <label class="form-check-label" for="gridRadios3">
+                      fourth 
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group row">
+              <div class="col-sm-2">branch</div>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="text" id="branch">
+                  <label class="form-check-label" for="branch">
+                    enter branch
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">update profile</button>
+              </div>
+            </div>
+          </form>
+
+    
+        
+         
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  
+  <script src="http://localhost:3000/bundle.js"></script>
+</html>

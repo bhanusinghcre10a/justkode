@@ -4,7 +4,7 @@ const catchasync = fn => {
   };
 };
 exports.home = catchasync(async (req, res, next) => {
-  res.status(200).render('home', {
+  res.status(200).render('home.pug', {
     title: 'justcode'
   });
 });
@@ -21,8 +21,13 @@ exports.signup = catchasync(async (req, res, next) => {
   });
 });
 
-exports.user = catchasync(async (req, res, next) => {
-  res.status(200).render('user', {
+exports.users = catchasync(async (req, res, next) => {
+  res.status(200).render('users.html', {
+    title: 'justcode | users'
+  });
+});
+exports.updateuser = catchasync(async (req, res, next) => {
+  res.status(200).render('user.html', {
     title: 'justcode | user'
   });
 });

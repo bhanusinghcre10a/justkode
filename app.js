@@ -12,12 +12,20 @@ const helmet = require('helmet');
 const sanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const compression = require('compression');
+
+var cons = require('consolidate');
+
+// view engine setup
 
 const app = express();
 app.use(helmet());
 
-app.set('view engine', 'pug');
+app.engine('html', cons.swig);
 app.set('views', path.join(__dirname, 'src'));
+app.set('view engine', 'html');
+
+app.set('view engine', 'pug');
 
 app.use(express.json({ limit: '10kb' }));
 app.use(cookieParser());
@@ -29,8 +37,10 @@ app.use(
     whitelist: ['duration']
   })
 );
+app.use(compression());
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'development') {
@@ -41,7 +51,7 @@ app.use((req, res, next) => {
   next();
 });
 const limit = ratelimit({
-  max: 100,
+  max: 1000,
   windowMs: 60 * 60 * 1000,
   message: 'you access this rout so many times please come after an hour ago'
 });

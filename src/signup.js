@@ -14,7 +14,7 @@ export const signup = async (name, email, password, passmatch) => {
     });
 
     if (res.data.status === 'success') {
-      console.log('success');
+      alert('you are signed up');
     }
   } catch (err) {
     console.log('error');

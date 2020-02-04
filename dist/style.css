@@ -429,7 +429,7 @@ body {
 .footer {
   position: absolute;
   width: 96%;
-  margin-top: 170rem;
+  margin-top: 270rem;
   padding: 15rem;
   background-color: #1b1919;
   font-size: 1.6rem; }
@@ -476,9 +476,67 @@ body {
   width: 96%;
   background-image: linear-gradient(white, #4e3d3d); }
 
+.hea1 {
+  background-color: darkslategrey; }
+
 .head1 {
   margin-left: 40rem;
   margin-top: 10rem; }
+
+.con {
+  margin-top: -10rem;
+  background-color: darkgray; }
+
+.ha1 {
+  text-align: center;
+  margin-top: 5rem;
+  margin-left: 15rem; }
+
+.b1 {
+  background-color: orange; }
+
+.allusersss {
+  float: right;
+  border-radius: 5rem;
+  display: inline-block;
+  background-color: orange;
+  margin-right: 20rem;
+  margin-top: 5rem; }
+
+.alluserss {
+  float: left;
+  border-radius: 5rem;
+  display: inline-block;
+  background-color: orange; }
+
+.c1 {
+  margin-left: 3rem; }
+
+.clearfix::after {
+  content: '';
+  clear: both; }
+
+.allusers {
+  margin-left: 15rem;
+  margin-top: -4rem;
+  margin-top: 10rem; }
+
+.ourstory {
+  padding-top: 30rem;
+  padding-left: 50rem;
+  margin-bottom: 50rem;
+  margin-top: 20rem;
+  position: absolute;
+  margin-top: 170rem;
+  height: 100rem;
+  width: 96%;
+  background-image: linear-gradient(white, #4e3d3d); }
+
+.para {
+  padding-left: -8rem;
+  font-size: 1.9rem;
+  text-decoration: firebrick;
+  text-transform: uppercase; }
 
 .card {
   perspective: 150rem;
@@ -556,3 +614,129 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    border-radius: 2px;
+    box-shadow: 0px 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    outline-offset: 20px;
+    transition: all 0.2s;
+    z-index: 10; }
+    .composition__photo-p3 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo-p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo-p1 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      box-shadow: 0px 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      transform: scale(1.05) translateY(-0.5rem);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
+.sendmsg {
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden; }
+  .sendmsg:target {
+    opacity: 1;
+    visibility: visible; }
+  .sendmsg:target .sendmsg__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .sendmsg__close:link, .sendmsg__close:visited {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    color: #999;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 3rem;
+    transition: all 0.2s; }
+  .sendmsg__close:hover {
+    color: #55c57a; }
+  .sendmsg__content {
+    width: 75%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2re 4rem rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s 0.2s; }
+  .sendmsg__send {
+    height: 20rem;
+    width: 90%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5); }
+    .sendmsg__send_message {
+      padding: 2rem;
+      font-size: 3rem;
+      border-radius: 5rem;
+      border: solid green;
+      outline: none;
+      height: 10rem;
+      width: 80%; }
+
+.msg {
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-bottom: 15rem; }
+
+.d1 {
+  margin-bottom: 12rem;
+  margin-left: 5rem;
+  height: 8rem;
+  width: 15rem;
+  font-size: 3rem; }
+
+.n1 {
+  list-style-type: none; }
+
+.msgdis {
+  font-size: 2rem;
+  color: green;
+  font-style: italic; }
+
+.back {
+  background-color: #a2f152;
+  height: 200%; }
+
+.profile {
+  height: 40%;
+  padding: 5rem;
+  margin-left: 40rem;
+  margin-bottom: 15rem; }
+
+.forms {
+  height: 40%;
+  margin-left: 40rem; }
+
+.t1 {
+  padding: 2rem;
+  border-radius: 3rem;
+  border: green solid 2px;
+  box-shadow: 2px 3px black;
+  size: 2rem;
+  font-weight: 700;
+  margin-top: 3rem; }

@@ -5,7 +5,66 @@
   width: 96%;
   background-image: linear-gradient(white, rgb(78, 61, 61));
 }
+.hea1 {
+  background-color: darkslategrey;
+}
 .head1 {
   margin-left: 40rem;
   margin-top: 10rem;
+}
+.con {
+  margin-top: -10rem;
+  background-color: darkgray;
+}
+.ha1 {
+  text-align: center;
+  margin-top: 5rem;
+  margin-left: 15rem;
+}
+.b1 {
+  background-color: orange;
+}
+.allusersss {
+  float: right;
+  border-radius: 5rem;
+  display: inline-block;
+  background-color: orange;
+  margin-right: 20rem;
+  margin-top: 5rem;
+}
+
+.alluserss {
+  float: left;
+  border-radius: 5rem;
+  display: inline-block;
+  background-color: orange;
+}
+.c1 {
+  margin-left: 3rem;
+}
+.clearfix::after {
+  content: '';
+  clear: both;
+}
+.allusers {
+  margin-left: 15rem;
+  margin-top: -4rem;
+  margin-top: 10rem;
+}
+.ourstory {
+  padding-top: 30rem;
+  padding-left: 50rem;
+  margin-bottom: 50rem;
+  margin-top: 20rem;
+  position: absolute;
+  margin-top: 170rem;
+  height: 100rem;
+  width: 96%;
+  background-image: linear-gradient(white, rgb(78, 61, 61));
+}
+.para {
+  padding-left: -8rem;
+  font-size: 1.9rem;
+  text-decoration: firebrick;
+  text-transform: uppercase;
 }

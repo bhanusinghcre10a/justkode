@@ -20,6 +20,18 @@ const port = 3000;
 const server = app.listen(port, () => {
   console.log('listening on port 300');
 });
+const io = require('socket.io')(server);
+
+io.on('connection', function(socket) {
+  socket.on('join', function(msg) {
+    console.log('joined');
+    socket.join(msg.mail);
+  });
+  socket.on('send', function(data) {
+    console.log('send');
+    socket.broadcast.emit('new_msg', { msg: data.data });
+  });
+});
 
 process.on('unhandledRejection', err => {
   console.log('unhandled rejection! shutting down');
@@ -35,3 +47,4 @@ process.on('uncaughtException', err => {
     process.exit(1);
   });
 });
+module.exports = io;

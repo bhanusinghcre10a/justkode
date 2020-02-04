@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="http://localhost:3000/style.css" />
+  </head>
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="check" />
+      <label for="check" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__bground">
+        &nbsp;
+      </div>
+      <div class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="/api/v1/home" class="navigation__link"
+              ><span>home</span></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="/api/v1/updateuser" class="navigation__link"
+              ><span>view profile</span></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="/api/v1/login" class="navigation__link"
+              ><span>login</span></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>update profile</span></a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>reset password</span></a>
+          </li>
+          <li class="navigation__item">
+            <a href="/api/v1/users/logout" class="navigation__link"><span>logout</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="hea1">
+      <div class="heading-secondary ha1">users connected with us</div>
+    </div>
+    <div class="con">
+      <div class="allusers"></div>
+    </div>
+
+    <div class="sendmsg" id="sendmsg">
+      <div class="sendmsg__content">
+        <a href="#" class="sendmsg__close">&times;</a>
+        <div class="msg">
+          
+          
+       
+        </div>
+     <div class="sendmsg__send">
+      <textarea class="sendmsg__send_message"></textarea>
+     
+      <div class="btn btn--green d1">send</div>
+     </div>
+        
+         
+         
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="http://localhost:3000/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+    var socket = io();
+    
+    $(function() {
+      $send = $(".d1");
+      $msg = $(".msg");
+      socket.on('new_msg', function(data) {
+        $msg.append(`<ul class="n1"><liclass="msgdis"><li><span class="msgdis">${data.msg}<span></ul>`);
+    });
+      $message = $(".sendmsg__send_message").val();
+      
+      $send.click(function() {
+      socket.emit('send', { data: $(".sendmsg__send_message").val() });
+      $msg.append(`<ul class="n1"><li><span class="msgdis">${$(".sendmsg__send_message").val()}<span><li></ul>`);
+    })
+  })
+  </script>
+  <script src="http://localhost:3000/bundle.js"></script>
+</html>

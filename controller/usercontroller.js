@@ -7,13 +7,6 @@ const catchasync = fn => {
   };
 };
 
-exports.getusers = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'this is not yet defined'
-  });
-};
-
 const filter = (obj, ...allowed) => {
   const newobj = {};
   Object.keys(obj).forEach(el => {
@@ -22,13 +15,6 @@ const filter = (obj, ...allowed) => {
     }
   });
   return newobj;
-};
-
-exports.getuser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'this is not yet defined'
-  });
 };
 
 exports.updateme = catchasync(async (req, res, next) => {
@@ -58,23 +44,3 @@ exports.deleteme = catchasync(async (req, res, next) => {
     data: null
   });
 });
-exports.createuser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'this is not yet defined'
-  });
-};
-
-exports.updateuser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'this is not yet defined'
-  });
-};
-
-exports.deleteuser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'this is not yet defined'
-  });
-};

@@ -10,9 +10,10 @@ export const login = async (email, password) => {
         password
       }
     });
-
     if (res.data.status === 'success') {
-      console.log('success');
+      var socket = io();
+      socket.emit('join', { mail: email });
+      alert('you are logged in');
     }
   } catch (err) {
     console.log('error');

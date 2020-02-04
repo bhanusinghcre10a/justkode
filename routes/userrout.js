@@ -8,6 +8,9 @@ router.post('/signin', authcontroller.signin);
 
 router.post('/forgotpassword', authcontroller.forgotpassword);
 router.post('/resetpassword/:token', authcontroller.resetpassword);
+router.get('/allusers', authcontroller.getusers);
+router.get('/viewuser', authcontroller.viewuser);
+router.get('/logout', authcontroller.logout);
 
 router.post('/updateme', authcontroller.protect, usercontroller.updateme);
 router.delete('/deleteme', authcontroller.protect, usercontroller.deleteme);
@@ -17,15 +20,5 @@ router.patch(
   authcontroller.protect,
   authcontroller.updatepassword
 );
-router
-  .route('/')
-  .get(usercontroller.getusers)
-  .post(usercontroller.createuser);
-
-router
-  .route('/:id')
-  .get(usercontroller.getuser)
-  .patch(usercontroller.updateuser)
-  .delete(usercontroller.deleteuser);
 
 module.exports = router;

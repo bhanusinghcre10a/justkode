@@ -29,7 +29,10 @@ const userschema = new mongoose.Schema({
   },
   passwordupdatedat: Date,
   passwordresettoken: String,
+  year: Number,
+  branch: String,
   passwordtokenexpireat: Date,
+  about: String,
   photo: String,
   password: {
     type: String,
