@@ -74,7 +74,6 @@ const usersloader = async obj => {
 const userloader = async obj => {
   try {
     await obj.getuser();
-    console.log(obj.result.data);
     usrview.renderuser(obj.result.data.user);
   } catch (error) {
     console.log(error);
