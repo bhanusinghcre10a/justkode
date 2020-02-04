@@ -61,6 +61,7 @@ app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
   next();
 });
+app.use('/', viewrout);
 
 app.use('/api/v1/users', usersrouter);
 app.use('/api/v1', viewrout);
