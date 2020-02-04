@@ -4,6 +4,7 @@ const authcontroller = require('./../controller/authcontroller');
 const viewcontroller = require('./../controller/viewcontroller');
 
 router.get('/', viewcontroller.home);
+router.get('/home', viewcontroller.home);
 router.get('/login', viewcontroller.login);
 router.get('/signupp', viewcontroller.signup);
 router.get('/alluser', authcontroller.protect, viewcontroller.users);
