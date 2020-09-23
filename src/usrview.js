@@ -11,7 +11,7 @@ exports.renderuser = user => {
           <div class="card-body ">
             <h5 class="card-title t1">${user.name}</h5>
             <p class="card-text t1">${user.about}</p>
-            <p class="card-text t1">${user.year}</p>
+            <p class="card-text t1">${user.email}</p>
             <p class="card-text t1">${user.branch}</p>
           </div>
         </div>

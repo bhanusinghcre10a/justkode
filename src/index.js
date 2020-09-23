@@ -14,6 +14,7 @@ import { user } from '../controller/viewcontroller';
 const loginForm = document.querySelector('.login-form');
 const users = document.querySelector('.allusers');
 const profile = document.querySelector('.profile');
+const update =document.getElementById('update')
 
 const signupForm = document.querySelector('.signup-form');
 const blogss = document.querySelector('.head1');
@@ -74,6 +75,7 @@ const usersloader = async obj => {
 const userloader = async obj => {
   try {
     await obj.getuser();
+    console.log(obj.result.data.user);
     usrview.renderuser(obj.result.data.user);
   } catch (error) {
     console.log(error);
@@ -89,7 +91,15 @@ if (users) {
 }
 
 if (profile) {
-  console.log('kbh');
+  update.addEventListener('click',async()=>{
+    await axios({
+      method: 'POST',
+      url: '/api/v1/users/updateuser',
+      data: {
+        email,
+        password
+      }
+  })
   const us = new User();
   userloader(us);
 }

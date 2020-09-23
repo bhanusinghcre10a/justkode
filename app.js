@@ -16,8 +16,6 @@ const compression = require('compression');
 
 var cons = require('consolidate');
 
-// view engine setup
-
 const app = express();
 app.use(helmet());
 
